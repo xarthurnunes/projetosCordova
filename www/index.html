@@ -40,7 +40,7 @@
 <body>
 <header class="container-fluid col-12 col-md-12">
 	<div class="row">
-		<div class="col text-center bg-info">
+		<div class="col text-center bg-dark">
 			<h1>Avaliação Linguagem de Programação 3</h1>
 			<h2>Não sei como fiz isso</h2>
 			<h2>Mas tá funcionando!!!</h2>
@@ -72,12 +72,12 @@
 			window.localStorage.setItem("Age", age1);
 		}
 
-		function showcliente(){
-			document.getElementById('mostrar').innerHTML = 
+		function showclient(){
+			document.getElementById('show').innerHTML = 
 				`<div>Client Name: ${window.localStorage.getItem("Name")}</div>
-					<div>CPF >>> ${window.localStorage.getItem("CPF")}</div>
-						<div>E-mail >>> ${window.localStorage.getItem("E-mail")}</div>
-							<div>Age >>> ${window.localStorage.getItem("Age")}</div>`
+					<div>CPF: ${window.localStorage.getItem("CPF")}</div>
+						<div>E-mail: ${window.localStorage.getItem("E-mail")}</div>
+							<div>Age: ${window.localStorage.getItem("Age")}</div>`
 		}
 
 		function eraseclient(){

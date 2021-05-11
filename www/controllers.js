@@ -1,7 +1,7 @@
 var appControllers = angular.module('controllers',[]);
 
-appControllers.controller('ClienteCtrl',['$scope','$location',function($scope,$location){
-	$scope.enviar=function(){
+appControllers.controller('ClientCtrl',['$scope','$location',function($scope,$location){
+	$scope.send=function(){
 		$location.path('/addclient/'+$scope.nameclient+'/'+$scope.cpf+'/'+$scope.age+'/'+$scope.email);
 	};
 }]);
@@ -10,15 +10,15 @@ appControllers.controller('AddClientCtrl',['$scope','$routeParams',function($sco
 
 	$scope.nnameclient = $routeParams.nameclient;
 	$scope.ncpf = $routeParams.cpf;
-	$scope.nemail = $routeParams.email;
 	$scope.nage = $routeParams.age;
+	$scope.nemail = $routeParams.email;
 
 
 	console.log('Marcelinho Luiz do Raça Negra');
 }]);
 
 		appControllers.controller('ExerciseCtrl',['$scope','$location',function($scope,$location){
-			$scope.enviar=function(){
+			$scope.send=function(){
 				$location.path('/addexercise/'+$scope.nameexercise+'/'+$scope.type+'/'+$scope.time+'/'+$scope.calories);
 	};
 }]);
