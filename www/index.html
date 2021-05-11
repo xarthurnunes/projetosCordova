@@ -89,22 +89,24 @@
 			erase.remove()
 		}
 
-		function saverexercise(){
+		function saveexercise(){
 			var exercise1 = document.getElementById("nameexercise").value;
 			var type1 = document.getElementById("type").value;
 			var time1 = document.getElementById("time").value;
 			var calories1 = document.getElementById("calories").value;
-			window.localStorage.setItem("Exercise", exercise1);
-			window.localStorage.setItem("Type", type1);
-			window.localStorage.setItem("Time", time1);
-			window.localStorage.setItem("Calories", calories1);
+			window.localStorage.setItem("exercise", exercise1);
+			window.localStorage.setItem("type", type1);
+			window.localStorage.setItem("time", time1);
+			window.localStorage.setItem("calories", calories1);
 		}
+
 		function showexercise(){
 			document.getElementById('show').innerHTML = 
-			`<div>Exercise Name: ${window.localStorage.getItem("Exercise")}<div>
-				<div>Exercise Type: ${window.localStorage.getItem("Type")}<div>
-					<div>Time Spent: ${window.localStorage.getItem("Time")}<div>
-						<div>Lost Calories: ${window.localStorage.getItem("Calories")}<div>`
+			`<div>Exercise Name: ${window.localStorage.getItem("exercise")}</div>
+				<div>Exercise Type: ${window.localStorage.getItem("type")}</div>
+					<div>Time Spent: ${window.localStorage.getItem("time")}</div>
+						<div>Lost Calories: ${window.localStorage.getItem("calories")}</div>`
+			console.log(localStorage.getItem("calories"));
 		}
 		function eraseexercise(){
 			var erase = document.getElementById('show')
@@ -130,7 +132,7 @@
 			<div>IMC Calculated: ${window.localStorage.getItem("IMC")}</div>`
 		}
 		function eraseimc(){
-			var erase = document.getElementById('erase')
+			var erase = document.getElementById('show')
 			window.localStorage.removeItem("Weight");
 			window.localStorage.removeItem("Height");
 			window.localStorage.removeItem("IMC");
