@@ -2,47 +2,48 @@ var appControllers = angular.module('controllers',[]);
 
 appControllers.controller('ClienteCtrl',['$scope','$location',function($scope,$location){
 	$scope.enviar=function(){
-		$location.path('/addcliente/'+$scope.nomecliente+'/'+$scope.cpf+'/'+$scope.idade+'/'+$scope.email);
+		$location.path('/addclient/'+$scope.nameclient+'/'+$scope.cpf+'/'+$scope.age+'/'+$scope.email);
 	};
 }]);
 
-appControllers.controller('AddClienteCtrl',['$scope','$routeParams',function($scope,$routeParams){
+appControllers.controller('AddClientCtrl',['$scope','$routeParams',function($scope,$routeParams){
 
-	$scope.nnomecliente = $routeParams.nomecliente;
+	$scope.nnameclient = $routeParams.nameclient;
 	$scope.ncpf = $routeParams.cpf;
-	$scope.nemail = $routeParams.idade;
-	$scope.nidade = $routeParams.email;
+	$scope.nemail = $routeParams.email;
+	$scope.nage = $routeParams.age;
 
-	console.log('Cheguei até aqui! Cliente!');
+
+	console.log('Marcelinho Luiz do Raça Negra');
 }]);
 
-		appControllers.controller('ExercicioCtrl',['$scope','$location',function($scope,$location){
+		appControllers.controller('ExerciseCtrl',['$scope','$location',function($scope,$location){
 			$scope.enviar=function(){
-				$location.path('/addexercicio/'+$scope.nomeexercicio+'/'+$scope.tipo+'/'+$scope.tempo+'/'+$scope.calorias);
+				$location.path('/addexercise/'+$scope.nameexercise+'/'+$scope.type+'/'+$scope.time+'/'+$scope.calories);
 	};
 }]);
 
-	appControllers.controller('AddExercicioCtrl',['$scope','$routeParams',function($scope,$routeParams){
+	appControllers.controller('AddExerciseCtrl',['$scope','$routeParams',function($scope,$routeParams){
 	
-		$scope.nnomeexercicio = $routeParams.nomeexercicio;
-		$scope.ntipo = $routeParams.tipo;
-		$scope.ntempo = $routeParams.tempo;
-		$scope.ncalorias = $routeParams.calorias;
+		$scope.nnameexercise = $routeParams.nameexercise;
+		$scope.ntype = $routeParams.type;
+		$scope.ntime = $routeParams.time;
+		$scope.ncalories = $routeParams.calories;
 	
-	console.log('Cheguei até aqui! Exercicio!!!');
+	console.log('Marcelinho tartaruga ninja');
 	}]);
 
 		appControllers.controller('ImcCtrl',['$scope','$location',function($scope,$location){
-			$scope.enviar=function(){
-				$location.path('/addimc/'+$scope.peso+'/'+$scope.altura);
+			$scope.send=function(){
+				$location.path('/addimc/'+$scope.weight+'/'+$scope.height);
 		};
 	}]);
 
 		appControllers.controller('AddImcCtrl',['$scope','$routeParams',function($scope,$routeParams){
 
-			$scope.npeso = $routeParams.peso;
-			$scope.naltura = $routeParams.altura;
-			$scope.nimc = $routeParams.peso / ($routeParams.altura * $routeParams.altura);
+			$scope.nweight = $routeParams.weight;
+			$scope.nheight = $routeParams.height;
+			$scope.nimc = $routeParams.weight / ($routeParams.height * $routeParams.height);
 			
-			console.log('Cheguei até aqui! IMC');
+			console.log('NINGUEM MAIS USA MONGO E CORDOVA!');
 		}]);

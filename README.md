@@ -1,3 +1,8 @@
-"#avaliacao-LP3-academia" 
-"#Michel Felippe"
-"#Prof. Marcelo Silva"
+###### AV 01 MARCELO SILVA LP3 ######
+
+#### A SIMPLE SOFTWARE TO CALCULATE IMC AND GET A REGISTRY OF THE GYM SPACES ####
+
+
+
+
+
